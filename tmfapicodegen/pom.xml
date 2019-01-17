@@ -1,0 +1,56 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>by.pvt</groupId>
+    <artifactId>tmf-api-codegen</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <user.home.dir>c:/users/nelli_kh</user.home.dir>
+    </properties>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.6.0</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>java</goal>
+                        </goals>
+                        <phase>install</phase>
+                    </execution>
+                </executions>
+                <configuration>
+                    <mainClass>io.swagger.codegen.SwaggerCodegen</mainClass>
+                    <additionalClasspathElements>
+                        <additionalClasspathElement>${user.home.dir}/.m2/repository/io/swagger/swagger-codegen-cli/2.4.0/swagger-codegen-cli-2.4.0.jar</additionalClasspathElement>
+                    </additionalClasspathElements>
+                    <arguments>
+                        <argument>generate</argument>
+                        <argument>-i</argument>
+                        <argument>../tmfapiswagger/shopingCart/v3/swagger2.json</argument>
+                        <argument>-l</argument>
+                        <argument>spring</argument>
+                        <argument>-o</argument>
+                        <argument>../shopingCart-v3-api</argument>
+                        <argument>--api-package</argument>
+                        <argument>by.pvt.api.shoppingcart</argument>
+                        <argument>--model-package</argument>
+                        <argument>by.pvt.model.shoppingcart</argument>
+                    </arguments>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>io.swagger</groupId>
+                        <artifactId>swagger-codegen-cli</artifactId>
+                        <version>2.4.0</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+        </plugins>
+    </build>
+
+
+</project>
