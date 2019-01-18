@@ -45,58 +45,75 @@ public interface ShoppingCartApi {
             @ApiResponse(code = 500, message = "Internal Server Error", response = Error.class)})
     @RequestMapping(value = "/shoppingCart",
             produces = {"application/json"},
-            consumes = {"application/json"},
+          //  consumes = {"application/json"},
             method = RequestMethod.GET)
     ResponseEntity<List<ShoppingCart>> listShoppingCart(@ApiParam(value = "Comma separated properties to display in response")
-                                                        @Valid @RequestParam(value = "fields", required = false)
+                                                        @Valid
+                                                        @RequestParam(value = "fields", required = false)
                                                                 String fields,
                                                         @ApiParam(value = "For filtering: An instant of time, ending at the TimePeriod.")
-                                                        @Valid @RequestParam(value = "validFor.endDateTime", required = false)
+                                                        @Valid
+                                                        @RequestParam(value = "validFor.endDateTime", required = false)
                                                                 OffsetDateTime validForEndDateTime,
                                                         @ApiParam(value = "For filtering: An instant of time, starting at the TimePeriod")
-                                                        @Valid @RequestParam(value = "validFor.startDateTime", required = false)
+                                                        @Valid
+                                                        @RequestParam(value = "validFor.startDateTime", required = false)
                                                                 OffsetDateTime validForStartDateTime,
                                                         @ApiParam(value = "For filtering: Author of the note")
-                                                        @Valid @RequestParam(value = "note.author", required = false)
+                                                        @Valid
+                                                        @RequestParam(value = "note.author", required = false)
                                                                 String noteAuthor,
                                                         @ApiParam(value = "For filtering: Date of the note")
-                                                        @Valid @RequestParam(value = "note.date", required = false)
+                                                        @Valid
+                                                        @RequestParam(value = "note.date", required = false)
                                                                 OffsetDateTime noteDate,
                                                         @ApiParam(value = "For filtering: Text of the note")
-                                                        @Valid @RequestParam(value = "note.text", required = false)
+                                                        @Valid
+                                                        @RequestParam(value = "note.text", required = false)
                                                                 String noteText,
                                                         @ApiParam(value = "For filtering: If true, indicates that is the preferred contact medium")
-                                                        @Valid @RequestParam(value = "contactMedium.preferred", required = false)
+                                                        @Valid
+                                                        @RequestParam(value = "contactMedium.preferred", required = false)
                                                                 Boolean contactMediumPreferred,
                                                         @ApiParam(value = "For filtering: Type of the contact medium, such as: email address, telephone number, postal address")
-                                                        @Valid @RequestParam(value = "contactMedium.type", required = false)
+                                                        @Valid
+                                                        @RequestParam(value = "contactMedium.type", required = false)
                                                                 String contactMediumType,
                                                         @ApiParam(value = "For filtering: A short descriptive name such as \"Subscription price\".")
-                                                        @Valid @RequestParam(value = "cartTotalPrice.name", required = false)
+                                                        @Valid
+                                                        @RequestParam(value = "cartTotalPrice.name", required = false)
                                                                 String cartTotalPriceName,
                                                         @ApiParam(value = "For filtering: A category that describes the price, such as recurring, discount, allowance, penalty, and so forth")
-                                                        @Valid @RequestParam(value = "cartTotalPrice.priceType", required = false)
+                                                        @Valid
+                                                        @RequestParam(value = "cartTotalPrice.priceType", required = false)
                                                                 String cartTotalPricePriceType,
                                                         @ApiParam(value = "For filtering: Could be month, week...")
-                                                        @Valid @RequestParam(value = "cartTotalPrice.recurringChargePeriod", required = false)
+                                                        @Valid
+                                                        @RequestParam(value = "cartTotalPrice.recurringChargePeriod", required = false)
                                                                 String cartTotalPriceRecurringChargePeriod,
                                                         @ApiParam(value = "For filtering: Could be minutes, GB...")
-                                                        @Valid @RequestParam(value = "cartTotalPrice.unitOfMeasure", required = false)
+                                                        @Valid
+                                                        @RequestParam(value = "cartTotalPrice.unitOfMeasure", required = false)
                                                                 String cartTotalPriceUnitOfMeasure,
                                                         @ApiParam(value = "For filtering: Can be \"add\" / \"modify\" / \"no_change\"/ \"delete\"")
-                                                        @Valid @RequestParam(value = "cartItem.action", required = false)
+                                                        @Valid
+                                                        @RequestParam(value = "cartItem.action", required = false)
                                                                 String cartItemAction,
                                                         @ApiParam(value = "For filtering: Quantity of cart items")
-                                                        @Valid @RequestParam(value = "cartItem.quantity", required = false)
+                                                        @Valid
+                                                        @RequestParam(value = "cartItem.quantity", required = false)
                                                                 Integer cartItemQuantity,
                                                         @ApiParam(value = "For filtering: status of cart item. e.g \"Active\" , \"SavedForLater\".")
-                                                        @Valid @RequestParam(value = "cartItem.status", required = false)
+                                                        @Valid
+                                                        @RequestParam(value = "cartItem.status", required = false)
                                                                 String cartItemStatus,
                                                         @ApiParam(value = "For filtering: Name of the related party")
-                                                        @Valid @RequestParam(value = "relatedParty.name", required = false)
+                                                        @Valid
+                                                        @RequestParam(value = "relatedParty.name", required = false)
                                                                 String relatedPartyName,
                                                         @ApiParam(value = "For filtering: Role of the related party.")
-                                                        @Valid @RequestParam(value = "relatedParty.role", required = false)
+                                                        @Valid
+                                                        @RequestParam(value = "relatedParty.role", required = false)
                                                                 String relatedPartyRole);
 
 
@@ -108,7 +125,7 @@ public interface ShoppingCartApi {
             @ApiResponse(code = 500, message = "Internal Server Error", response = Error.class)})
     @RequestMapping(value = "/shoppingCart/{id}",
             produces = {"application/json"},
-            consumes = {"application/json"},
+          //  consumes = {"application/json"},
             method = RequestMethod.GET)
     ResponseEntity<List<ShoppingCart>> retrieveShoppingCart(@ApiParam(value = "Identifier of the Shopping Cart", required = true) @PathVariable("id") String id);
 

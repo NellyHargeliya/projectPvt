@@ -43,7 +43,7 @@ public class HubApiController implements HubApi {
                 log.error("Couldn't serialize response for content type application/json", e);
                 return new ResponseEntity<EventSubscription>(HttpStatus.INTERNAL_SERVER_ERROR);
             }
-        }
+    }
 
         return new ResponseEntity<EventSubscription>(HttpStatus.NOT_IMPLEMENTED);
     }

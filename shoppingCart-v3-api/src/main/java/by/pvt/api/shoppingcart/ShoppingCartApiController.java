@@ -135,7 +135,8 @@ public class ShoppingCartApiController implements ShoppingCartApi {
         return new ResponseEntity<List<ShoppingCart>>(HttpStatus.NOT_IMPLEMENTED);
     }
 
-    public ResponseEntity<List<ShoppingCart>> retrieveShoppingCart(@ApiParam(value = "Identifier of the Shopping Cart", required = true) @PathVariable("id") String id) {
+    public ResponseEntity<List<ShoppingCart>> retrieveShoppingCart(@ApiParam(value = "Identifier of the Shopping Cart", required = true)
+                                                                   @PathVariable("id") String id) {
         String accept = request.getHeader("Accept");
         if (accept != null && accept.contains("application/json")) {
             try {

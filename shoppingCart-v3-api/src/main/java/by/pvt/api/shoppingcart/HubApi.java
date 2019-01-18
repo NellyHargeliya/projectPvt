@@ -28,7 +28,7 @@ public interface HubApi {
         @ApiResponse(code = 400, message = "Bad Request", response = Error.class),
         @ApiResponse(code = 500, message = "Internal Server Error", response = Error.class) })
     @RequestMapping(value = "/hub",
-        produces = { "application/json" }, 
+        produces = { "application/json" },
         consumes = { "application/json" },
         method = RequestMethod.POST)
     ResponseEntity<EventSubscription> registerListener(@ApiParam(value = "Data containing the callback endpoint to deliver the information" ,required=true )  @Valid @RequestBody EventSubscriptionInput data);
@@ -40,8 +40,8 @@ public interface HubApi {
         @ApiResponse(code = 404, message = "Not Found", response = Error.class),
         @ApiResponse(code = 500, message = "Internal Server Error", response = Error.class) })
     @RequestMapping(value = "/hub/{id}",
-        produces = { "application/json" }, 
-        consumes = { "application/json" },
+       produces = { "application/json" },
+       consumes = { "application/json" },
         method = RequestMethod.DELETE)
     ResponseEntity<Void> unregisterListener(@ApiParam(value = "The id of the registered listener",required=true) @PathVariable("id") String id);
 
