@@ -1,0 +1,261 @@
+{
+  "href": "123",
+  "note": [
+    {
+      "author": "Author",
+      "date": "2019-01-17T07:59:27.092Z",
+      "text": "Test"
+    }
+  ],
+  "relatedParty": [
+    {
+      "href": "href_relatedParty",
+      "name": "Name",
+      "role": "role",
+      "validFor": {
+        "endDateTime": "2019-01-17T07:59:27.092Z",
+        "startDateTime": "2019-01-17T07:59:27.092Z"
+      }
+    }
+  ],
+  "validFor": {
+    "endDateTime": "2019-01-17T07:59:27.092Z",
+    "startDateTime": "2019-01-17T07:59:27.092Z"
+  },
+
+  "contactMedium": [
+    {
+      "characteristic": {
+        "city": "City",
+        "country": "country",
+        "emailAddress": "emailAddress",
+        "faxNumber": "faxNumber",
+        "phoneNumber": "phoneNumber",
+        "postCode": "postCode",
+        "stateOrProvince": "stateOrProvince",
+        "street1": "street1",
+        "street2": "street2",
+        "type": "type"
+      },
+      "preferred": true,
+      "type": "type",
+      "validFor": {
+        "endDateTime": "2019-01-17T07:59:27.092Z",
+        "startDateTime": "2019-01-17T07:59:27.092Z"
+      }
+    }
+  ],
+
+  "cartTotalPrice": [
+    {
+      "description": "description",
+      "name": "Name",
+      "price": {
+        "dutyFreeAmount": {
+          "unit": "Unit",
+          "value": 0.52
+        },
+
+        "percentage": 0,
+        "taxIncludedAmount": {
+          "unit": "Unit",
+          "value": 0.85
+        },
+        "taxRate": 4.56
+      },
+      "priceAlteration": [
+        {
+          "applicationDuration": 0,
+          "description": "description",
+          "name": "Name",
+          "price": {
+            "dutyFreeAmount": {
+              "unit": "Unit",
+              "value": 0
+            },
+
+            "percentage": 0,
+            "taxIncludedAmount": {
+              "unit": "Unit",
+              "value": 0
+            },
+            "taxRate": 0
+          },
+          "priceCondition": "priceCondition",
+          "priceType": "priceType",
+          "priority": 0,
+          "recurringChargePeriod": "recurringChargePeriod",
+          "unitOfMeasure": "unitOfMeasure",
+          "validFor": {
+            "endDateTime": "2019-01-17T07:59:27.092Z",
+            "startDateTime": "2019-01-17T07:59:27.092Z"
+          }
+        }
+      ],
+      "priceType": "priceType",
+      "recurringChargePeriod": "recurringChargePeriod",
+      "unitOfMeasure": "unitOfMeasure"
+    }
+  ],
+
+  "cartItem": [
+    {
+      "action": "cartItem_action",
+
+      "cartItemRelationship": [
+        {
+          "type": "cartItemRelationship_type"
+        }
+      ],
+      "itemPrice": [
+        {
+          "description": "description_itemPrice",
+          "name": "Name",
+          "price": {
+            "dutyFreeAmount": {
+              "unit": "dutyFreeAmount_unit",
+              "value": 0
+            },
+
+            "percentage": 0,
+            "taxIncludedAmount": {
+              "unit": "taxIncludedAmount_unit",
+              "value": 0
+            },
+            "taxRate": 0
+          },
+          "priceAlteration": [
+            {
+              "applicationDuration": 0,
+              "description": "description_priceAlteration",
+              "name": "Name",
+              "price": {
+                "dutyFreeAmount": {
+                  "unit": "dutyFreeAmount_unit",
+                  "value": 0
+                },
+                "percentage": 0,
+                "taxIncludedAmount": {
+                  "unit": "taxIncludedAmount_unit",
+                  "value": 0
+                },
+                "taxRate": 0
+              },
+              "priceCondition": "priceCondition",
+              "priceType": "priceType",
+              "priority": 0,
+              "recurringChargePeriod": "recurringChargePeriod",
+              "unitOfMeasure": "unitOfMeasure",
+              "validFor": {
+                "endDateTime": "2019-01-17T07:59:27.091Z",
+                "startDateTime": "2019-01-17T07:59:27.091Z"
+              }
+            }
+          ],
+          "priceType": "priceType",
+          "recurringChargePeriod": "string",
+          "unitOfMeasure": "string"
+        }
+      ],
+      "product": {
+        "characteristic": [
+          {
+            "name": "string",
+            "value": "string"
+          }
+        ],
+        "href": "string",
+        "name": "string",
+        "place": [
+          {
+            "href": "string",
+            "name": "string",
+            "role": "string"
+          }
+        ],
+        "productRelationship": [
+          {
+            "type": "string"
+          }
+        ],
+        "productSpecification": {
+          "href": "string",
+          "name": "string",
+          "version": "string"
+        },
+        "relatedParty": [
+          {
+            "href": "string",
+            "name": "string",
+            "role": "string",
+            "validFor": {
+              "endDateTime": "2019-01-17T07:59:27.092Z",
+              "startDateTime": "2019-01-17T07:59:27.092Z"
+            }
+          }
+        ]
+      },
+      "productOffering": {
+        "bundledProductOffering": [
+          {
+            "href": "string",
+            "name": "string"
+          }
+        ],
+        "href": "string",
+        "name": "string"
+      },
+      "quantity": 0,
+      "status": "string",
+      "totalItemPrice": [
+        {
+          "description": "string",
+          "name": "string",
+          "price": {
+            "dutyFreeAmount": {
+              "unit": "string",
+              "value": 0
+            },
+            "percentage": 0,
+            "taxIncludedAmount": {
+              "unit": "string",
+              "value": 0
+            },
+            "taxRate": 0
+          },
+          "priceAlteration": [
+            {
+              "applicationDuration": 0,
+              "description": "string",
+              "name": "string",
+              "price": {
+                "dutyFreeAmount": {
+                  "unit": "string",
+                  "value": 0
+                },
+                "percentage": 0,
+                "taxIncludedAmount": {
+                  "unit": "string",
+                  "value": 0
+                },
+                "taxRate": 0
+              },
+              "priceCondition": "string",
+              "priceType": "priceType",
+              "priority": 0,
+              "recurringChargePeriod": "string",
+              "unitOfMeasure": "string",
+              "validFor": {
+                "endDateTime": "2019-01-17T07:59:27.092Z",
+                "startDateTime": "2019-01-17T07:59:27.092Z"
+              }
+            }
+          ],
+          "priceType": "priceType",
+          "recurringChargePeriod": "string",
+          "unitOfMeasure": "string"
+        }
+      ]
+    }
+  ]
+}
