@@ -44,6 +44,7 @@ public interface ShoppingCartApi {
             @ApiResponse(code = 400, message = "Bad Request", response = Error.class),
             @ApiResponse(code = 500, message = "Internal Server Error", response = Error.class)})
     @RequestMapping(value = "/shoppingCart",
+            produces = {"application/json"},
             consumes = {"application/json"},
             method = RequestMethod.GET)
     ResponseEntity<List<ShoppingCart>> listShoppingCart(@ApiParam(value = "Comma separated properties to display in response")

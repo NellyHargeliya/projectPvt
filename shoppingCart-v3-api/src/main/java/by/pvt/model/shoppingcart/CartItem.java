@@ -47,27 +47,27 @@ public class CartItem {
     private List<CartItem> cardItem = null;
 
     @JsonProperty("totalItemPrice")
-    @Valid
-    @OneToMany(cascade = CascadeType.ALL)
-    @LazyCollection(LazyCollectionOption.FALSE)
+    @Embedded
     private List<CartPrice> totalItemPrice = null;
 
     @JsonProperty("product")
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private ProductRefOrValue product = null;
 
     @JsonProperty("itemPrice")
     @Valid
-    @ManyToMany
+    @ManyToMany(cascade = CascadeType.ALL)
+    @LazyCollection(LazyCollectionOption.FALSE)
     private List<CartPrice> itemPrice = null;
 
     @JsonProperty("productOffering")
-    @OneToOne
+    @OneToOne(cascade = CascadeType.ALL)
     private ProductOfferingRef productOffering = null;
 
     @JsonProperty("cartItemRelationship")
     @Valid
-    @OneToMany
+    @OneToMany(cascade = CascadeType.ALL)
+    @LazyCollection(LazyCollectionOption.FALSE)
     private List<CartItemRelationship> cartItemRelationship = null;
 
     public CartItem action(String action) {

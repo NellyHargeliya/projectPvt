@@ -22,10 +22,11 @@ import java.util.Objects;
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2019-01-01T19:21:18.377+03:00")
 @Entity
 public class Note {
-    @JsonProperty("id")
+
     @Id
-    @Valid
-    @Column(unique = true)
+    @GeneratedValue(generator = "UUID")
+    @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
+    @Column
     private String id = null;
 
 

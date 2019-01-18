@@ -38,7 +38,6 @@ public class BundledProductOfferingRef {
 
     @JsonProperty("bundledProductOffering")
     @Embedded
-    //@OneToMany(fetch = FetchType.LAZY)
     private List<BundledProductOfferingRef> bundledProductOffering = null;
 
 

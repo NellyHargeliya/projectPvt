@@ -22,6 +22,7 @@
                         <phase>install</phase>
                     </execution>
                 </executions>
+
                 <configuration>
                     <mainClass>io.swagger.codegen.SwaggerCodegen</mainClass>
                     <additionalClasspathElements>

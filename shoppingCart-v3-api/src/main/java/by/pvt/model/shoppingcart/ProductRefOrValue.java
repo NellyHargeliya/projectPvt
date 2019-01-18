@@ -38,9 +38,8 @@ public class ProductRefOrValue {
     private String name = null;
 
     @JsonProperty("productRelationship")
-    @Valid
-    @Embedded
-
+    @OneToMany(cascade = CascadeType.ALL)
+    @LazyCollection(LazyCollectionOption.FALSE)
     private List<ProductRefOrValueRelationship> productRelationship = null;
 
     @JsonProperty("place")
@@ -51,18 +50,18 @@ public class ProductRefOrValue {
 
     @JsonProperty("characteristic")
     @Valid
-    @ManyToMany(cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL)
     @LazyCollection(LazyCollectionOption.FALSE)
     private List<ProductCharacteristic> characteristic = null;
 
     @JsonProperty("relatedParty")
     @Valid
-//    @ManyToMany(cascade = CascadeType.ALL)
-////    @LazyCollection(LazyCollectionOption.FALSE)
-   @Embedded
+    @OneToMany(cascade = CascadeType.ALL)
+    @LazyCollection(LazyCollectionOption.FALSE)
     private List<RelatedPartyRef> relatedParty = null;
 
     @JsonProperty("productSpecification")
+    @Valid
     @OneToOne(cascade = CascadeType.ALL)
     private ProductSpecificationRef productSpecification = null;
 

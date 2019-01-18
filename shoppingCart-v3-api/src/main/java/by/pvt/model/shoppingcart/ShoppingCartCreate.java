@@ -23,7 +23,6 @@ import java.util.Objects;
 
 public class ShoppingCartCreate {
     @JsonProperty("href")
-    @Valid
     private String href = null;
 
     @JsonProperty("validFor")

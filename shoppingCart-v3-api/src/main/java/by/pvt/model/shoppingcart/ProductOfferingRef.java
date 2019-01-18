@@ -22,7 +22,6 @@ import java.util.Objects;
 @Validated
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.SpringCodegen", date = "2019-01-01T19:21:18.377+03:00")
 @Entity
-//@Table(name = "productofferingref")
 public class ProductOfferingRef {
 
     @JsonProperty("href")
@@ -31,6 +30,8 @@ public class ProductOfferingRef {
 
     @JsonProperty("id")
     @Id
+    @GeneratedValue(generator = "UUID")
+    @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
     @Column
     private String id = null;
 
@@ -41,6 +42,7 @@ public class ProductOfferingRef {
     @JsonProperty("bundledProductOffering")
     @Valid
     @OneToMany(cascade = CascadeType.ALL)
+    @LazyCollection(LazyCollectionOption.FALSE)
     private List<BundledProductOfferingRef> bundledProductOffering = null;
 
     public ProductOfferingRef href(String href) {
